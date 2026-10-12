@@ -1,0 +1,8 @@
+{
+  "name": "Remix Vespera 9:16 — AI Video Prompt Mühendisliği Stüdyosu",
+  "description": "Sosyal medya (TikTok, Instagram Reels) ve doğrulama konseptleri için Runway Gen-3, Kling AI ve Luma uyumlu 9:16 fotogerçekçi 4K dikey video prompt üretim stüdyosu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

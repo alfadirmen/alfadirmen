@@ -1,0 +1,376 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="cinematic-dark"] {
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --studio-canvas: #090D14;
+  --studio-surface: #101622;
+  --studio-recessed: #0B0F19;
+  --studio-header: rgba(16, 22, 34, 0.94);
+  --studio-ink: #F8FAFC;
+  --studio-muted: #94A3B8;
+  --studio-accent: #F59E0B;
+  --studio-accent-hover: #D97706;
+  --studio-accent-secondary: #10B981;
+  --studio-on-accent: #0F172A;
+  --studio-border-base: #1E293B;
+  --studio-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.45), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="clean-light"] {
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --studio-canvas: #F8FAFC;
+  --studio-surface: #FFFFFF;
+  --studio-recessed: #F1F5F9;
+  --studio-header: rgba(255, 255, 255, 0.96);
+  --studio-ink: #0F172A;
+  --studio-muted: #475569;
+  --studio-accent: #2563EB;
+  --studio-accent-hover: #1D4ED8;
+  --studio-accent-secondary: #0D9488;
+  --studio-on-accent: #FFFFFF;
+  --studio-border-base: #E2E8F0;
+  --studio-card-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="midnight-slate"] {
+  --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --studio-canvas: #090D16;
+  --studio-surface: #101726;
+  --studio-recessed: #0B101C;
+  --studio-header: rgba(16, 23, 38, 0.94);
+  --studio-ink: #EEF2F6;
+  --studio-muted: #94A3B8;
+  --studio-accent: #0EA5E9;
+  --studio-accent-hover: #0284C7;
+  --studio-accent-secondary: #8B5CF6;
+  --studio-on-accent: #082F49;
+  --studio-border-base: #1E293B;
+  --studio-card-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.55);
+}
+
+@layer base {
+  body {
+    background-color: var(--studio-canvas);
+    color: var(--studio-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  select option {
+    background-color: var(--studio-surface);
+    color: var(--studio-ink);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Studio Theme Class Mapping */
+.min-h-screen.bg-\[\#0B0A09\] {
+  background-color: var(--studio-canvas) !important;
+  color: var(--studio-ink) !important;
+}
+
+header.bg-\[\#0B0A09\]\/95,
+header.bg-\[\#0B0A09\]\/90 {
+  background-color: var(--studio-header) !important;
+  border-color: var(--studio-border-base) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+div.bg-\[\#0B0A09\],
+section.bg-\[\#0B0A09\],
+article.bg-\[\#0B0A09\] {
+  background-color: var(--studio-surface) !important;
+  box-shadow: var(--studio-card-shadow);
+  border-radius: 0.75rem;
+}
+
+select.bg-\[\#0B0A09\],
+input.bg-\[\#0B0A09\],
+textarea.bg-\[\#0B0A09\] {
+  background-color: var(--studio-surface) !important;
+  color: var(--studio-ink) !important;
+  border-radius: 0.5rem;
+}
+
+pre.bg-\[\#0B0A09\] {
+  background-color: var(--studio-recessed) !important;
+  color: var(--studio-ink) !important;
+  border-radius: 0.5rem;
+}
+
+button.bg-\[\#0B0A09\] {
+  background-color: var(--studio-surface) !important;
+}
+
+.bg-\[\#0B0A09\]\/85,
+.bg-\[\#0B0A09\]\/90 {
+  background-color: color-mix(in srgb, var(--studio-surface) 92%, transparent) !important;
+}
+
+/* Primary Accent Fills & Buttons */
+.bg-\[\#D4A359\] {
+  background-color: var(--studio-accent) !important;
+  color: var(--studio-on-accent) !important;
+}
+
+.group:hover .group-hover\:bg-\[\#D4A359\] {
+  background-color: var(--studio-accent) !important;
+  color: var(--studio-on-accent) !important;
+}
+
+.bg-\[\#D4A359\]\/5 {
+  background-color: color-mix(in srgb, var(--studio-accent) 8%, transparent) !important;
+}
+.bg-\[\#D4A359\]\/10 {
+  background-color: color-mix(in srgb, var(--studio-accent) 14%, transparent) !important;
+}
+.bg-\[\#D4A359\]\/15 {
+  background-color: color-mix(in srgb, var(--studio-accent) 18%, transparent) !important;
+}
+.bg-\[\#D4A359\]\/20 {
+  background-color: color-mix(in srgb, var(--studio-accent) 24%, transparent) !important;
+}
+.bg-\[\#D4A359\]\/75 {
+  background-color: color-mix(in srgb, var(--studio-accent) 76%, transparent) !important;
+}
+
+/* Text Colors */
+.text-\[\#D4A359\],
+.hover\:text-\[\#D4A359\]:hover {
+  color: var(--studio-accent) !important;
+}
+.text-\[\#D4A359\]\/90 {
+  color: color-mix(in srgb, var(--studio-accent) 92%, var(--studio-ink)) !important;
+}
+.text-\[\#D4A359\]\/80 {
+  color: color-mix(in srgb, var(--studio-accent) 82%, var(--studio-ink)) !important;
+}
+
+/* Text on accent buttons */
+.bg-\[\#D4A359\] .text-\[\#0B0A09\],
+button.bg-\[\#D4A359\],
+.text-\[\#0B0A09\].bg-\[\#D4A359\] {
+  color: var(--studio-on-accent) !important;
+}
+
+/* Physical 3-line verification paper card */
+.verification-paper-badge {
+  background-color: #FFFDF8 !important;
+  color: #171614 !important;
+  border: 1px solid rgba(23, 22, 20, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Ink & Text Hierarchy */
+.text-\[\#F5F2EB\],
+.hover\:text-\[\#F5F2EB\]:hover {
+  color: var(--studio-ink) !important;
+}
+.text-\[\#F5F2EB\]\/90 {
+  color: color-mix(in srgb, var(--studio-ink) 92%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/85 {
+  color: color-mix(in srgb, var(--studio-ink) 88%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/80 {
+  color: color-mix(in srgb, var(--studio-ink) 82%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/75 {
+  color: color-mix(in srgb, var(--studio-ink) 78%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/70 {
+  color: color-mix(in srgb, var(--studio-ink) 72%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/65 {
+  color: color-mix(in srgb, var(--studio-ink) 68%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/60 {
+  color: color-mix(in srgb, var(--studio-ink) 64%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/55 {
+  color: color-mix(in srgb, var(--studio-ink) 58%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/50 {
+  color: color-mix(in srgb, var(--studio-ink) 54%, transparent) !important;
+}
+.text-\[\#F5F2EB\]\/40 {
+  color: color-mix(in srgb, var(--studio-ink) 45%, transparent) !important;
+}
+
+/* Borders & Dividers */
+.border-\[\#D4A359\],
+.hover\:border-\[\#D4A359\]:hover,
+.focus\:border-\[\#D4A359\]:focus {
+  border-color: var(--studio-accent) !important;
+}
+.border-\[\#D4A359\]\/50,
+.hover\:border-\[\#D4A359\]\/50:hover {
+  border-color: color-mix(in srgb, var(--studio-accent) 50%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/45 {
+  border-color: color-mix(in srgb, var(--studio-accent) 45%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/40 {
+  border-color: color-mix(in srgb, var(--studio-accent) 40%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/35 {
+  border-color: color-mix(in srgb, var(--studio-accent) 35%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/30 {
+  border-color: color-mix(in srgb, var(--studio-accent) 30%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/25 {
+  border-color: color-mix(in srgb, var(--studio-accent) 25%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/20 {
+  border-color: color-mix(in srgb, var(--studio-accent) 20%, var(--studio-border-base)) !important;
+}
+.border-\[\#D4A359\]\/15 {
+  border-color: color-mix(in srgb, var(--studio-accent) 15%, var(--studio-border-base)) !important;
+}
+
+.accent-\[\#D4A359\] {
+  accent-color: var(--studio-accent) !important;
+}
+
+svg [stroke="#D4A359"] {
+  stroke: var(--studio-accent);
+}
+svg [fill="#D4A359"] {
+  fill: var(--studio-accent);
+}
+svg [fill="#F5F2EB"] {
+  fill: var(--studio-ink);
+}
+svg [stroke="#F5F2EB"] {
+  stroke: var(--studio-ink);
+}
+svg [fill="#0B0A09"] {
+  fill: var(--studio-surface);
+}
+svg stop[stop-color="#D4A359"] {
+  stop-color: var(--studio-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles for PDF Export */
+@media print {
+  @page {
+    margin: 1.2cm;
+    size: A4 portrait;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide main site chrome and interactive controls during print */
+  header,
+  nav,
+  main,
+  button,
+  .no-print,
+  #step-01-concept,
+  #step-02-photo,
+  #step-03-video,
+  #step-04-scene-editor,
+  #step-05-gallery {
+    display: none !important;
+  }
+
+  /* Make modal container natural page block */
+  .fixed.inset-0 {
+    position: static !important;
+    inset: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    z-index: auto !important;
+  }
+
+  .max-w-5xl {
+    max-width: 100% !important;
+  }
+
+  .max-h-\[92vh\] {
+    max-height: none !important;
+  }
+
+  /* Printable Report Area */
+  #editing-report-printable-area {
+    display: block !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  #editing-report-printable-area * {
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    text-shadow: none !important;
+  }
+
+  #editing-report-printable-area .text-\[\#D4A359\] {
+    color: #b45309 !important;
+  }
+
+  #editing-report-printable-area .bg-\[\#0B0A09\] {
+    background-color: #ffffff !important;
+  }
+
+  #editing-report-printable-area .bg-\[\#0B0A09\]\/90,
+  #editing-report-printable-area .bg-\[\#0B0A09\]\/80,
+  #editing-report-printable-area .bg-\[\#0B0A09\]\/70,
+  #editing-report-printable-area .bg-\[\#0B0A09\]\/60,
+  #editing-report-printable-area .bg-\[\#0B0A09\]\/40 {
+    background-color: #f8fafc !important;
+  }
+
+  /* Keep waveform bars visible with clear high-contrast grayscale or tint */
+  #editing-report-printable-area .flex-1.rounded-sm {
+    background-color: #334155 !important;
+  }
+}
+
